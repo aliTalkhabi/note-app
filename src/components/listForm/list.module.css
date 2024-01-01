@@ -1,0 +1,7 @@
+.listContainer {
+  width: calc(100% - 50px);
+  height: 95%;
+  margin: 2.5% auto;
+  background: #8297c7;
+  border-radius: 7px;
+}
