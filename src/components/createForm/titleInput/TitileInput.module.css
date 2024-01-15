@@ -1,0 +1,4 @@
+input,
+label ~ div {
+  height: 100% !important;
+}
