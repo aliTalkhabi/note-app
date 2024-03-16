@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Box, TextField, Button } from '@mui/material';
 import styles from './TitileInput.module.css'
+import { SendNoteRequest, sendNoteRequestSuccess } from '../../../servers/API';
+
 
 const TitleInput = () => {
     const [titleData, setTitleData] = useState('');
@@ -11,9 +13,10 @@ const TitleInput = () => {
     const setValueDescriptionData = (e) => {
         setDescriptionData(e.target.value)
     }
-    const saveData = () => {
-        console.log(`title: ${titleData}`);
-        console.log(`description: ${descriptionData}`);
+    const saveData = async () => {
+        // await SendNoteRequestuest(titleData, descriptionData);
+        await SendNoteRequest(titleData, descriptionData);
+        await sendNoteRequestSuccess();
     }
     return (
         <>
